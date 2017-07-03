@@ -24,3 +24,10 @@ var refresh= function(){
   seTimeout(update, 1000);//1000ミリ秒待ってからupdateを実行
 }
 update();// 最初の更新
+
+var thmubs = document.querySelectorAll('.thumb');
+for(idx in thmubs){
+    thmubs[idx].onclick = function(){
+        document.getElementById("bigimg").src = 'img/' + this.dataset.image + '.jpg';
+    }
+}
